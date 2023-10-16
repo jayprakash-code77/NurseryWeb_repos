@@ -1,0 +1,73 @@
+#mainContainer{
+    /* text-align: center; */
+   }
+   
+   #mainRow{
+       /* text-align: center; */
+       border: 1px solid lightgreen;
+   
+   }
+   
+   
+   #col1{
+       border: 1px solid lightgreen;
+       text-align: center;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       font-weight: 900;
+       font-size: 77px;
+       background-image: -moz-linear-gradient(7);
+       background-color: lightgreen;
+       color: white;
+   
+   }
+   
+   
+   /* #col2{
+       border: 1px solid lightgreen;
+   } */
+   
+   
+   #Row1{
+       text-align: center;
+       border: 1px solid rgb(98, 211, 98);
+   }
+   
+   
+   #navBar{
+       background-color: rgb(243, 198, 106);
+       color: rgb(62, 64, 62);
+       text-align: center;
+       font-weight: 600;
+       
+   }
+   
+   #Main1{
+   border: 1px solid black;
+   }
+   
+   
+   #Main2{
+       border: 1px solid black;
+   }
+   
+   #Main3{
+       border: 1px solid black;
+   }
+   
+   
+   a{
+       text-decoration: none;
+       color: black;
+   }
+   
+   
+   
+   #Footer{
+       background-color: bisque;
+       text-align: center;
+   }
+   
+   
+   #footerrow{
+       text-align: center;
+   }
