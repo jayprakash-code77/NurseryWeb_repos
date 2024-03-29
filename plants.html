@@ -1,59 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon"href="jsimage/logopl2.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Plant For Selling</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="plants.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <div class="logo">
-                <img src="jsimage/logo.png">
+    <header>
+        <div class="header-1">
+        <div class="share">
+            <span>Follow us:</span>
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+        </div>
+        <div class="call">
+            <span>Call us:</span>
+            <a href="#">+91-7459000962</a>
+        </div>
+        </div> 
+        <div class="header-2">
+            <a href="#" class="logo"><i class="fas fa-seedling"></i> PLANTS NURSERY</a>
+                <from action="" class="search-bar-container">
+                    <input type="text" id="search-bar" placeholder="search Here...">
+                    <label for="search-bar" class="fas fa-search"></label>
+                </from>
+        </div>
+        <div class="header-3">
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <nav class="navbar">
+                <a href="#Home">Home</a>
+                <a href="#Category">Category</a>
+                <a href="#Product">Product</a>
+                <a href="#Deal">Deal</a>
+                <a href="#Contact">Contact</a>
+            </nav>
+            <div class="icon">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-user-circle"></a>
             </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </header>
-        <div class="banner">
-            <div class="banner-top">
-                <div class="text">
-                    <h1>The Botanical Bazaar</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At possimus aspernatur tenetur provident fuga voluptatem modi non cum nemo temporibus.</p>
-                    <a href="#" class="btn" >Lern More</a>
+        </div>
+    </header>
+
+    <!-- home section starts -->
+    <section class="home" id="home">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="box" style="background:url(jsimage/slider11.jpg);">
+                        <div class="content">
+                            <span>upto 75% off</span>
+                            <h3>plant big sale special offer</h3>
+                            <a href="#" class="btn">shop now</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="slider">
-                    <div class="slider-inner">
-                        <div class="item">
-                            <img src="jsimage/plants1.jpg" alt="">
+                <div class="swiper-slide">
+                    <div class="box" style="background:url(jsimage/slider12.jpg);">
+                        <div class="content">
+                            <span>upto 45% off</span>
+                            <h3>plant make people happy</h3>
+                            <a href="#" class="btn">shop now</a>
                         </div>
-                        <div class="item">
-                            <img src="jsimage/plants2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box" style="background:url(jsimage/slider13.jpg);">
+                        <div class="content">
+                            <span>upto 65% off</span>
+                            <h3>plant big sale special offer</h3>
+                            <a href="#" class="btn">shop now</a>
                         </div>
-                        <div class="item">
-                            <img src="jsimage/plants3.jpg" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="jsimage/plants4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box" style="background:url(jsimage/slider14.jpg);">
+                        <div class="content">
+                            <span>upto 75% off</span>
+                            <h3>plant big sale special offer</h3>
+                            <a href="#" class="btn">shop now</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="image-group">
-                <a href="#"><img src="jsimage/plants5.jpg"></a>
-                <a href="#"><img src="jsimage/plants6.jpg"></a>
-                <a href="#"><img src="jsimage/plants7.jpg"></a>
-                <a href="#"><img src="jsimage/plants8.jpg"></a>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+    <!-- banner section starts -->
+
+    <section class="banner-content">
+        <div class="banner">
+            <img src="jsimage/home.jpg" alt="">
+            <div class="content">
+            <span>new arrivals</span>
+            <h3>House Plants</h3>
+            <a href="#" class="btn">shop now</a>
+        </div>
+        </div>
+        <div class="banner">
+            <img src="jsimage/office.jpg" alt="">
+            <div class="content">
+            <span>new arrivals</span>
+            <h3>Dining Table<br>Plants</h3>
+            <a href="#" class="btn">shop now</a>
+        </div>
+        </div>
+        <div class="banner">
+            <img src="jsimage/office2.jpg" alt="">
+            <div class="content">
+            <span>new arrivals</span>
+            <h3>Office Plants</h3>
+            <a href="#" class="btn">shop now</a>
+        </div>
+        </div>
+        <div class="banner">
+            <img src="jsimage/house2.jpg" alt="">
+            <div class="content">
+            <span>new arrivals</span>
+            <h3>Front Wall<br>Plants</h3>
+            <a href="#" class="btn">shop now</a>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Category start -->
+
+    <section class="Category" id="Category">
+        <h1 class="heading">shop by Category</h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="jsimage/Marigolds.jpg" alt="">
+                <div class="content">
+                    <h3>Marigold</h3>
+                    <a href="#" class="btn">Shop now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="jsimage/fl2.jpg" alt="">
+                <div class="content">
+                    <h3>Marigold</h3>
+                    <a href="#" class="btn">Shop now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="jsimage/fl4.jpg" alt="">
+                <div class="content">
+                    <h3>Marigold</h3>
+                    <a href="#" class="btn">Shop now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="jsimage/fl6.jpg" alt="">
+                <div class="content">
+                    <h3>Marigold</h3>
+                    <a href="#" class="btn">Shop now</a>
+                </div>
             </div>
         </div>
+    </section>
+
+    <!-- product section start -->
+
+    <section class="product" id="product">
+        <h1 class="heading">New products</h1>
+        <div class="box-container">
+            <div class="box">
+                <span class="discount">-20%</span>
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <img src="jsimage/plants1.jpeg" alt="">
+                <h3>Latest plants</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="quantity">
+                    <span>Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                </div>
+                <div class="price">Rs. 399<span>Rs. 599</span></div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="box">
+                <span class="discount">-20%</span>
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <img src="jsimage/tamato.jpeg" alt="">
+                <h3>Latest plants</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="quantity">
+                    <span>Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                </div>
+                <div class="price">Rs. 399<span>Rs. 599</span></div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="box">
+                <span class="discount">-20%</span>
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <img src="jsimage/plants2.jpeg" alt="">
+                <h3>Latest plants</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="quantity">
+                    <span>Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                </div>
+                <div class="price">Rs. 399<span>Rs. 599</span></div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="box">
+                <span class="discount">-20%</span>
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <img src="jsimage/Indoor Plants.jpeg" alt="">
+                <h3>Latest plants</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="quantity">
+                    <span>Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                </div>
+                <div class="price">Rs. 399<span>Rs. 599</span></div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="box">
+                <span class="discount">-20%</span>
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <img src="jsimage/lemon.jpeg" alt="">
+                <h3>Latest plants</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="quantity">
+                    <span>Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                </div>
+                <div class="price">Rs. 399<span>Rs. 599</span></div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="box">
+                <span class="discount">-20%</span>
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <img src="jsimage/citrus.jpeg" alt="">
+                <h3>Latest plants</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="quantity">
+                    <span>Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                </div>
+                <div class="price">Rs. 399<span>Rs. 599</span></div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- icon section starts -->
+
+    <section class="icons-container">
+    <div class="icon">
+        <img src="jsimage/shipped.png" alt="">
+        <div class="content">
+            <h3>Free shipping</h3>
+            <p>Free shipping on order</p>
+        </div>
     </div>
-    
+    <div class="icon">
+        <img src="jsimage/wallet.png" alt="">
+        <div class="content">
+            <h3>100% Money Back</h3>
+            <p>You've 10 days to return</p>
+        </div>
+    </div>
+    <div class="icon">
+        <img src="jsimage/payment.png" alt="">
+        <div class="content">
+            <h3>Payment Secure</h3>
+            <p>100% secure payment</p>
+        </div>
+    </div>
+    <div class="icon">
+        <img src="jsimage/support.png" alt="">
+        <div class="content">
+            <h3>Support 24/7</h3>
+            <p>Contact us anytime</p>
+        </div>
+    </div>
+    </section>
+    <footer>
+        <div class="down">
+            <h1>footer</h1>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="plants.js"></script>
 </body>
 </html>
