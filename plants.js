@@ -3,6 +3,11 @@ let navbar = document.querySelector('.navbar');
 let header = document.querySelector('.header-3');
 let scrollTop = document.querySelector('.scroll-top');
 
+document.getElementById("bannerLink").addEventListener("click", function() {
+    window.location.href = "house plants.html";
+});
+
+
 menu.addEventListener('click',() =>{
     menu.classList.toggle('fa-times');
     navbar.classList.toggle('active');
@@ -71,7 +76,17 @@ setInterval(function(){
 )
 
 
-    document.getElementById("bannerLink").addEventListener("click", function() {
-        window.location.href = "house plants.html";
+
+
+    document.getElementById("bannerLink2").addEventListener("click", function() {
+        window.location.href = "dining table plants.html";
+    });
+   
+    document.getElementById("bannerLink3").addEventListener("click", function() {
+        window.location.href = "office plants.html";
+    });
+
+    document.getElementById("bannerLink4").addEventListener("click", function() {
+        window.location.href = "front wall plants.html";
     });
 
