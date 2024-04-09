@@ -69,3 +69,9 @@ setInterval(function(){
     countDown();
 },1000
 )
+
+
+    document.getElementById("bannerLink").addEventListener("click", function() {
+        window.location.href = "house plants.html";
+    });
+
