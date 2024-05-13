@@ -3,9 +3,6 @@ let navbar = document.querySelector('.navbar');
 let header = document.querySelector('.header-3');
 let scrollTop = document.querySelector('.scroll-top');
 
-document.getElementById("bannerLink").addEventListener("click", function() {
-    window.location.href = "house plants.html";
-});
 
 
 menu.addEventListener('click',() =>{
@@ -76,7 +73,9 @@ setInterval(function(){
 )
 
 
-
+    document.getElementById("bannerLink").addEventListener("click", function() {
+        window.location.href = "house plants.html";
+    });
 
     document.getElementById("bannerLink2").addEventListener("click", function() {
         window.location.href = "dining table plants.html";
@@ -90,3 +89,12 @@ setInterval(function(){
         window.location.href = "front wall plants.html";
     });
 
+
+    document.getElementById("marigold-content").addEventListener("click", function() {
+        window.location.href = "marigold Plant.html";
+    });
+    
+    document.getElementById("gudhal-content").addEventListener("click", function() {
+        window.location.href = "gudhal Plant.html";
+    });
+    
