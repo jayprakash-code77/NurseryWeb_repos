@@ -1,37 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="icon"href="jsimage/logopl2.png">
+    <link rel="icon" href="jsimage/logopl2.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plant For Selling</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="plants.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
+
 <body>
     <header>
         <div class="header-1">
-        <div class="share">
-            <span>Follow us:</span>
-            <a href="#" class="fab fa-facebook-f"></a>
+            <div class="share">
+                <span>Follow us:</span>
+                <!-- <a href="#" class="fab fa-facebook-f"></a>
             <a href="#" class="fab fa-twitter"></a>
             <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-linkedin"></a> -->
+
+                <div class="wrapper">
+                    <div class="button">
+                        <div class="icon">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </div>
+                        <span>Facebook</span>
+                    </div>
+                    <div class="button">
+                        <div class="icon">
+                            <i class="fa-brands fa-square-twitter"></i>
+                        </div>
+                        <span>Twitter</span>
+                    </div>
+                    <div class="button">
+                        <div class="icon">
+                            <i class="fa-brands fa-square-instagram"></i>
+                        </div>
+                        <span>Instagram</span>
+                    </div>
+                    <div class="button">
+                        <div class="icon">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <span>Linkedin</span>
+                    </div>
+                </div>
+            </div>
+            <div class="call">
+                <span>Call us:</span>
+                <a href="#">+91-7459000962</a>
+            </div>
         </div>
-        <div class="call">
-            <span>Call us:</span>
-            <a href="#">+91-7459000962</a>
-        </div>
-        </div> 
         <div class="header-2">
             <a href="#" class="logo"><i class="fas fa-seedling"></i> PLANTS NURSERY</a>
-                <from action="" class="search-bar-container">
-                    <input type="text" id="search-bar" placeholder="search Here...">
-                    <label for="search-bar" class="fas fa-search"></label>
-                </from>
+            <from action="" class="search-bar-container">
+                <input type="text" id="search-bar" placeholder="search Here...">
+                <label for="search-bar" class="fas fa-search"></label>
+            </from>
         </div>
         <div class="header-3">
             <div id="menu-bar" class="fas fa-bars"></div>
@@ -98,30 +127,30 @@
 
     <!-- banner section starts -->
 
-    <section class="banner-content" >
+    <section class="banner-content">
         <div class="banner" id="bannerLink">
             <img src="jsimage/home.jpg" alt="">
             <div class="content">
-            <span>new arrivals</span>
-            <h3>House Plants</h3>
-            <a href="house plants.html" class="btn">shop now</a>
-        </div>
+                <span>new arrivals</span>
+                <h3>House Plants</h3>
+                <a href="house plants.html" class="btn">shop now</a>
+            </div>
         </div>
         <div class="banner" id="bannerLink2">
             <img src="jsimage/office.jpg" alt="">
             <div class="content">
-            <span>new arrivals</span>
-            <h3>Dining Table Plants</h3>
-            <a href="dining table plants.html" class="btn">shop now</a>
-        </div>
+                <span>new arrivals</span>
+                <h3>Dining Table Plants</h3>
+                <a href="dining table plants.html" class="btn">shop now</a>
+            </div>
         </div>
         <div class="banner" id="bannerLink3">
             <img src="jsimage/office2.jpg" alt="">
             <div class="content">
-            <span>new arrivals</span>
-            <h3>Office Plants</h3>
-            <a href="office plants.html" class="btn">shop now</a>
-        </div>
+                <span>new arrivals</span>
+                <h3>Office Plants</h3>
+                <a href="office plants.html" class="btn">shop now</a>
+            </div>
         </div>
         <div class="banner" id="bannerLink4">
             <img src="jsimage/house2.jpg" alt="">
@@ -131,7 +160,7 @@
                 <a href="front wall plants.html" class="btn">shop now</a>
             </div>
         </div>
-        
+
     </section>
 
 
@@ -140,15 +169,15 @@
     <section class="Category" id="Category">
         <h1 class="heading">shop by Category</h1>
         <div class="box-container">
-            <div class="box">
-                <img src="jsimage/Marigolds.jpg" alt="">
+            <div class="box" id="marigold-content">
+                <img src="jsimage/marigold4.jpeg" alt="">
                 <div class="content">
                     <h3>Marigold</h3>
-                    <a href=""  class="btn">Shop now</a>
+                    <a href="marigold Plant.html" class="btn">Shop now</a>
                 </div>
             </div>
-            <div class="box">
-                <img src="jsimage/fl2.jpg" alt="">
+            <div class="box" id="gudhal-content">
+                <img src="jsimage/gudhal1.jpeg" alt="">
                 <div class="content">
                     <h3>Marigold</h3>
                     <a href="#" class="btn">Shop now</a>
@@ -321,34 +350,34 @@
     <!-- icon section starts -->
 
     <section class="icons-container">
-    <div class="icon">
-        <img src="jsimage/shipped.png" alt="">
-        <div class="content">
-            <h3>Free shipping</h3>
-            <p>Free shipping on order</p>
+        <div class="icon">
+            <img src="jsimage/shipped.png" alt="">
+            <div class="content">
+                <h3>Free shipping</h3>
+                <p>Free shipping on order</p>
+            </div>
         </div>
-    </div>
-    <div class="icon">
-        <img src="jsimage/wallet.png" alt="">
-        <div class="content">
-            <h3>100% Money Back</h3>
-            <p>You've 10 days to return</p>
+        <div class="icon">
+            <img src="jsimage/wallet.png" alt="">
+            <div class="content">
+                <h3>100% Money Back</h3>
+                <p>You've 10 days to return</p>
+            </div>
         </div>
-    </div>
-    <div class="icon">
-        <img src="jsimage/payment.png" alt="">
-        <div class="content">
-            <h3>Payment Secure</h3>
-            <p>100% secure payment</p>
+        <div class="icon">
+            <img src="jsimage/payment.png" alt="">
+            <div class="content">
+                <h3>Payment Secure</h3>
+                <p>100% secure payment</p>
+            </div>
         </div>
-    </div>
-    <div class="icon">
-        <img src="jsimage/support.png" alt="">
-        <div class="content">
-            <h3>Support 24/7</h3>
-            <p>Contact us anytime</p>
+        <div class="icon">
+            <img src="jsimage/support.png" alt="">
+            <div class="content">
+                <h3>Support 24/7</h3>
+                <p>Contact us anytime</p>
+            </div>
         </div>
-    </div>
     </section>
 
     <!-- deal section starts -->
@@ -357,10 +386,10 @@
         <div class="row">
             <div class="content">
                 <h3 class="title">don't miss the deal</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Repellat eaque ipsam sint facilis ratione excepturi consectetur 
-                delectus aspernatur non, autem tempore beatae commodi! Corporis 
-                numquam voluptatem dolor consectetur adipisci sunt?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellat eaque ipsam sint facilis ratione excepturi consectetur
+                    delectus aspernatur non, autem tempore beatae commodi! Corporis
+                    numquam voluptatem dolor consectetur adipisci sunt?</p>
                 <div class="count-down">
                     <div class="box">
                         <h3 id="day">00</h3>
@@ -391,7 +420,9 @@
     <section class="contact" id="contact">
         <h1 class="heading">get in touch</h1>
         <div class="row">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8199021278856!2d72.84421359999997!3d19.071654400000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c904bfa34d83%3A0x4b0ca510b0000000!2sMonarch%20Studio!5e0!3m2!1sen!2sin!4v1711917681122!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8199021278856!2d72.84421359999997!3d19.071654400000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c904bfa34d83%3A0x4b0ca510b0000000!2sMonarch%20Studio!5e0!3m2!1sen!2sin!4v1711917681122!5m2!1sen!2sin"
+                allowfullscreen="" loading="lazy"></iframe>
             <form action="">
                 <div class="inputBox">
                     <input type="text" required>
@@ -408,7 +439,7 @@
                 <div class="inputBox">
                     <textarea required name="" id="" cols="30" rows="10"></textarea>
                     <label>Message</label>
-                </div> 
+                </div>
                 <input type="submit" value="Send Message" class="btn">
 
             </form>
@@ -416,6 +447,15 @@
         </div>
     </section>
 
+    <!-- ads video section starts -->
+    <section class="ads" >
+        <video src="js video/plants web.mp4" width="90%" height="300" margin-left="10px" controls autoplay muted loop></video>
+    </section>
+
+    <!-- ads audio section starts -->
+    <section class="ads" >
+        <audio src="js audio/500 Me Paisa Nhi Hai Chura Lo - Viral.mp3" width="90%" height="300" margin-left="10px" controls autoplay muted loop></audio>
+    </section>
 
 
     <!-- Footer section starts -->
@@ -424,10 +464,10 @@
         <div class="box-container">
             <div class="box">
                 <h3>About us</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Necessitatibus nulla atque, labore rem placeat 
-                perspiciatis magnam! Aliquid provident magni quaerat?</p>
-                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Necessitatibus nulla atque, labore rem placeat
+                    perspiciatis magnam! Aliquid provident magni quaerat?</p>
+            </div>
             <div class="box">
                 <h3>Branch location</h3>
                 <a href="#">Azamgarh</a>
@@ -454,13 +494,12 @@
         <h1 class="credit"> created by <span> Mr.Bewda Coder </span> | all rights reserved!</h1>
     </section>
 
-<!-- scroll top butten -->
+    <!-- scroll top butten -->
 
-<a href="#home" class="scroll-top fa-solid fa-angle-up"></a>
-
-
+    <a href="#home" class="scroll-top fa-solid fa-angle-up"></a>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="plants.js"></script>
+    <script src="plants.js"></script>
 </body>
+
 </html>
