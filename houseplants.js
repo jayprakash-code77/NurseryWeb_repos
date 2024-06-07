@@ -27,3 +27,22 @@ window.onscroll = () =>{
 }
 
 
+const carouselButtonLeft = document.querySelector('.carousel-button.left');
+const carouselButtonRight = document.querySelector('.carousel-button.right');
+const productScroll = document.querySelector('.box-container');
+const productCarousel = document.querySelector('.product');
+
+carouselButtonLeft.addEventListener('click', () => {
+    productScroll.scrollBy({
+        left: -productCarousel.clientWidth, // Move to the left
+        behavior: 'smooth'
+    });
+});
+
+carouselButtonRight.addEventListener('click', () => {
+    productScroll.scrollBy({
+        left: productCarousel.clientWidth, // Move to the right
+        behavior: 'smooth'
+    });
+});
+
