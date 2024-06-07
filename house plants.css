@@ -157,21 +157,84 @@ section{
     background:#333;
 }
 
-
-.product .box-container{
-    display:flex;
-    flex-wrap:wrap;
-    gap:2rem;
+.product{
+    /* min-width:24rem; Adjust width as needed */
+    overflow: hidden; /* Hide overflowing content */
+    position: relative; /* For button positioning */
+    margin: 0 4.2rem 0 4.2rem;
 }
+.product .box-container{
+    /* display:flex; */
+    /* flex-wrap:wrap; */
+
+    display: flex; /* Use flexbox for scrolling */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox*/
+    gap:2rem;
+
+}
+
+.product .box-container ::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers */
+}
+
 .product .box-container .box{
-    flex:1 1 23rem;
-    border:.1rem solid rgba(0, 0 ,0, .3);
-    box-shadow:0 .5rem 1rem rgba(0, 0 ,0, .1);
+     /* flex:1 1 23rem; */
+    /* border:.1rem solid rgba(0, 0 ,0, .3); */
+    /* box-shadow:0 .5rem 1rem rgba(0, 0 ,0, .1); */
     text-align: center;
     position: relative;
-    overflow:hidden;
+    /* overflow:hidden;  */
+    min-width:24rem; /* Adjust image width */
+    
+
     
 }
+
+
+.carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%); /* Center buttons vertically */
+            z-index: 1; /* Ensure buttons appear above images */
+            background-color:rgba(11, 244, 11, 0.401); /* Semi-transparent background */
+            border: none;
+            padding: 10px;
+            border-radius:50%;
+            cursor: pointer;
+            color: white;
+            font-size:20px;
+            height:40px;
+            width:40px;
+        }
+
+        .carousel-button.left {
+            left: 10px;
+            margin-right:20px;
+            size:100px;
+
+        }
+
+        .carousel-button.right {
+            right: 10px;
+            margin:10px;
+            margin-left:20px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 .product .box-container .box img{
     border-bottom:.1rem solid rgba(0, 0 ,0, .3);
     height:32rem;
@@ -281,6 +344,14 @@ section{
     color:#666;
 }
 
+
+
+
+
+
+
+
+
 section.footer{
     background-color:var(--green);
 }
@@ -364,8 +435,8 @@ section.footer{
 @media(max-width:1035px){
     .product .box-container .box{
         flex:1 1 30rem;
-        border:.1rem solid rgba(0, 0 ,0, .3);
-        box-shadow:0 .5rem 1rem rgba(0, 0 ,0, .1);
+        /* border:.1rem solid rgba(0, 0 ,0, .3);
+        box-shadow:0 .5rem 1rem rgba(0, 0 ,0, .1); */
         text-align: center;
         position: relative;
         overflow:hidden;
