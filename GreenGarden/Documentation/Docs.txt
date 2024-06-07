@@ -1,0 +1,2 @@
+Changes on "Home Page":-
+1) Removed the "effect of hover" from the social media icons.
