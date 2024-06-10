@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-let countDate = new Date('may 1 2024 00:00:00').getTime();
+let countDate = new Date('may 1 2025 00:00:00').getTime();
 
 function countDown(){
     let now = new Date().getTime();
