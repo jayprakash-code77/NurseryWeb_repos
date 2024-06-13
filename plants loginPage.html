@@ -24,7 +24,8 @@
                     </div>
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="password">
+                        <input type="password" placeholder="password" id="password">
+                        <img src="jsimage/eye.png" id="eyeicon">
                     </div>
                     <p>Forgot password <a href="#">Click Here!</a></p>
                 </div>
@@ -36,26 +37,9 @@
         </div>
     </div>
 
-    <script>
-        let signinbtn = document.getElementById("signinbtn");
-        let signupbtn = document.getElementById("signupbtn");
-        let namefield = document.getElementById("namefield");
-        let title = document.getElementById("title");
+   <script src="plantsLoginPage.js">
+           
+   </script>
 
-        signinbtn.onclick = function(){
-            namefield.style.maxHeight = "0";
-            title.innerHTML = "Sign In";
-            signupbtn.classList.add("disable");
-            signinbtn.classList.remove("disable");
-        }
-
-        signupbtn.onclick = function(){
-            namefield.style.maxHeight = "65px";
-            title.innerHTML = "Sign Up";
-            signinbtn.classList.add("disable");
-            signupbtn.classList.remove("disable");
-        }
-
-    </script>
 </body>
 </html>
