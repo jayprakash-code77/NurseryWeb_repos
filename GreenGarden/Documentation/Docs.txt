@@ -1,0 +1,25 @@
+Changes on "Home Page":-
+1) Removed the "effect of hover" from the social media icons.
+2) Made the home page route (/).
+3) Made the login and signup routes.
+
+
+
+FrontEnd(a1)
+1)Liked products page.
+2)Add to cart page.
+3)
+
+
+FrontEnd(b1)
+1) Add symbol for sing up and sign in with google.
+
+
+Changed to be made >>> with no ID >>> Jay
+1) Instead of exporting data from other directory, "use import" to save space.
+
+
+
+
+
+Deepu>>>>>>>>>>>>>
