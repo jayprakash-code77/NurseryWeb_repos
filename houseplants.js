@@ -1,61 +1,12 @@
-let menu = document.querySelector('#menu-bar');
-let navbar = document.querySelector('.navbar');
-let header = document.querySelector('.header-3');
-let scrollTop = document.querySelector('.scroll-top');
-
-menu.addEventListener('click',() =>{
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
-});
-window.onscroll = () =>{
-    menu.classList.remove('fa-times');
-    navbar.classList.remove('active');
-
-    if(window.scrollY>250){
-        header.classList.add('active');
-    }else{
-        header.classList.remove('active');
-    }
-
-    if (window.scrollY > 250) {
-        scrollTop.style.display = 'initial';
-    } else {
-        scrollTop.style.display = 'none';
-    }
-    
- 
-}
-
-
-const carouselButtonLeft = document.querySelector('.carousel-button.left');
-const carouselButtonRight = document.querySelector('.carousel-button.right');
-const productScroll = document.querySelector('.box-container');
-const productCarousel = document.querySelector('.product');
-
-carouselButtonLeft.addEventListener('click', () => {
-    productScroll.scrollBy({
-        left: -productCarousel.clientWidth, // Move to the left
-        behavior: 'smooth'
-    });
-});
-
-carouselButtonRight.addEventListener('click', () => {
-    productScroll.scrollBy({
-        left: productCarousel.clientWidth, // Move to the right
-        behavior: 'smooth'
-    });
-});
-
-
-
-
-
 const addToCartButtons = document.querySelectorAll('.btn');
 const cartIcon = document.getElementById('cart-icon');
 const cartNotification = document.getElementById('cart-notification');
 
 // Initialize cart items in localStorage if not already present
 let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+// Show initial cart notification count
+showCartNotification();
 
 addToCartButtons.forEach(button => {
     button.addEventListener('click', event => {
@@ -96,7 +47,7 @@ addToCartButtons.forEach(button => {
 // Function to show cart notification
 function showCartNotification() {
     // Update the notification count
-    cartNotification.textContent = cartItems.length;
+    cartNotification.textContent = cartItems.length === 0 ? '0' : cartItems.length.toString();
 }
 
 // Event listener for cart icon click to navigate to cart page
