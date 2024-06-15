@@ -136,6 +136,23 @@ section{
     display:none;
 }
 
+#cart-icon {
+    position: relative;
+}
+
+#cart-notification {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+
+
 .header-3.active{
     position:fixed;
     top:0; right:0; left:0;
