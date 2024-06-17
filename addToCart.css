@@ -151,39 +151,64 @@ section{
 
 
 
+/* Cart Section */
 
-/* body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(229, 227, 227);
-} */
 
-.cart-section {
-    padding: 4rem;
-    background-color: #fff;
-    margin: 4.2rem;
+.cart-page{
+    display: flex;  
+    /* border:1px solid green; */
+    padding:4.2rem;
+    gap:30px;
 }
 
-.cart-section h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
+.cart-container{
+    /* border:1px solid black; */
+    background-color:white;
+    width:900px;
+
+    
+}
+.space{
+    height:20px;
+    background-color:#e0dede;
+}
+.cart-container .continue{
+    padding:20px;
+    box-shadow: 0 1px 5px #888, 0 -1px 5px #888;
+    
+}
+.cart-container .continue .continue-btn{
+    display:block;
+    padding:2rem 10rem;
+    background:orangered;
+    color:#fff;
+    font-size:1.7rem;
+    cursor: pointer;
+    margin-left:500px;
+    font-size:20px;
+}
+.cart-container .continue .continue-btn:hover{
+    background-color:var(--green);
 }
 
-.cart-container {
+
+
+.cart-container h1{
+  padding:3.5rem 1.5rem 3.5rem 2.5rem;
+  font-weight:900;
+  font-size:25px;
+}
+
+.cart-container .cart-item {
     display: flex;
-    justify-content:space-between;
-    width:500px;
-   
-}
-
-.cart-item {
-    display: flex;
-    align-items: center;
     margin-bottom: 1.5rem;
     border-bottom: 1px solid #ccc;
-    padding-bottom: 1rem;
+    padding:2rem;
+    width: 100%; /* Full width on smaller screens */
+    font-size:13px;
 }
+
+
 
 .cart-item img {
     width: 100px; /* Set a fixed width */
@@ -191,50 +216,75 @@ section{
     margin-right: 1rem; /* Space between image and item details */
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-right:30px;
 }
+
 
 .cart-item .item-details {
     flex: 1;
 }
 
-.cart-summary {
-    /* flex: 1; */
-    height:120px;
-    padding: 2rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+.price-container{
+    /* border:1px solid red; */
+    background-color:white;
+    width:350px;
+    margin-left:4px;
+    max-height:400px;
 }
 
-.cart-summary h3 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+.price-container .price-details{
+    padding:10px;
+    font-size:15px;
+    color:#666;
+    border-bottom:.1rem solid #666;
 }
 
-.cart-summary .subtotal {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+.price-container .mrp{
+    padding:10px;
+    font-size:15px;
+    display:flex;
+    justify-content:space-between;
+}
+.price-container .product-dis{
+    padding:10px;
+    font-size:15px;
+    display:flex;
+    justify-content:space-between;
+}
+.price-container .delivery-fees{
+    padding:10px  0px 20px 0px;
+    font-size:15px;
+    display:flex;
+    justify-content:space-between;
+    border-bottom:2px dashed #666;
+    margin:10px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 0.8rem 3rem;
-    background: var(--green);
-    color: #fff;
-    font-size: 1.7rem;
-    text-decoration: none;
-    text-align: center;
+.price-container .total-amount{
+    padding:10px  0px 20px 0px;
+    font-size:15px;
+    display:flex;
+    justify-content:space-between;
+    border-bottom:2px dashed #333;
+    margin:10px;
+}
+
+.price-container .checkout-btn{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:.8rem 3rem;
+    background:orangered;
+    color:#fff;
+    font-size:2.5rem;
     cursor: pointer;
+    margin:20px;
+    padding:8px 10px 8px 10px;
+    
 }
-
-.btn:hover {
-    background: #333;
+.price-container .checkout-btn:hover{
+background:var(--green);
 }
-
-
-/* Add this to your existing CSS */
 
 .cart-item .delete-btn {
     background: #ff4d4d;
@@ -250,7 +300,6 @@ section{
 .cart-item .delete-btn:hover {
     background: #e60000;
 }
-
 
 
 
@@ -329,7 +378,44 @@ section.footer{
         font-size:55%;
     }
 
+}
+
+@media(max-width:1080px){
   
+    .cart-container{
+        /* border:1px solid black; */
+        background-color:white;
+        width:700px;
+    }
+    
+
+}
+
+@media(max-width:1035px){
+    .product .box-container .box{
+        flex:1 1 30rem;
+        border:.1rem solid rgba(0, 0 ,0, .3);
+        box-shadow:0 .5rem 1rem rgba(0, 0 ,0, .1);
+        text-align: center;
+        position: relative;
+        overflow:hidden;
+    }
+
+    .cart-container{
+        /* border:1px solid black; */
+        background-color:white;
+        width:580px;
+    }
+    .cart-container .continue .continue-btn{
+        padding:1.5rem 8rem;
+        font-size:1.7rem;
+        margin:auto;
+        font-size:20px;
+    
+    
+    }
+
+
 }
 
 @media(max-width:991px){
@@ -341,17 +427,7 @@ section.footer{
     section{
         padding:1.5rem;
     }
-}
-@media(max-width:1035px){
-    .product .box-container .box{
-        flex:1 1 30rem;
-        border:.1rem solid rgba(0, 0 ,0, .3);
-        box-shadow:0 .5rem 1rem rgba(0, 0 ,0, .1);
-        text-align: center;
-        position: relative;
-        overflow:hidden;
-        
-    }
+  
 }
 
 
@@ -388,5 +464,75 @@ section.footer{
     .header-2 .search-bar-container{
         width:100%;
         margin-top:2rem;
-    }}
+    }
+    
+    .cart-page {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cart-container, .price-container {
+        width: 100%;
+    }
+
+    .cart-container .continue .continue-btn{
+        padding:1.5rem 8rem;
+        font-size:1.7rem;
+        margin:auto;
+        font-size:20px;
+    
+    
+    }
+}
+
+
+
+
+@media(max-width:480px){
+    .cart-container h1 {
+        font-size: 2.5rem;
+    }
+  
+    .price-details, .mrp, .product-dis, .delivery-fees, .total-amount {
+        font-size: 1.5rem;
+    }
+    .cart-container .continue .continue-btn{
+        font-size:15px;
+    }
+    .cart-container .continue{
+    padding:10px;
+    }
+    
+.price-container .checkout-btn{
+    font-size:15px;
+    margin:20px;
+    padding:8px 10px 8px 10px;
+    
+}
+ 
+}
+@media(max-width:400px){
+    .cart-container h1 {
+        font-size: 1.8rem;
+    }
+  
+    .price-details, .mrp, .product-dis, .delivery-fees, .total-amount {
+        font-size: 1rem;
+    }
+    .cart-container .continue .continue-btn{
+        font-size:15px;
+    }
+    .cart-container .continue{
+    padding:10px;
+    }
+    
+.price-container .checkout-btn{
+    font-size:15px;
+    margin:20px;
+    padding:8px 10px 8px 10px;
+    
+}
+ 
+}
+
+
 

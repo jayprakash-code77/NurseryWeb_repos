@@ -21,16 +21,18 @@ function renderCartItems() {
             <div class="item-details">
                 <h3>${item.name}</h3>
                 <p>Quantity: ${item.quantity}</p>
-                <p>Price: Rs. ${item.price}</p>
+                <p>Price: ₹ ${item.price}</p>
                 <button class="delete-btn" data-index="${index}">Delete</button>
+
             </div>
+
         `;
         cartItemsContainer.appendChild(cartItem);
 
         subtotal += item.price * item.quantity;
     });
 
-    subtotalPriceElement.textContent = `Rs. ${subtotal}`;
+    subtotalPriceElement.textContent = `₹ ${subtotal}`;
 }
 
 // Function to delete a cart item

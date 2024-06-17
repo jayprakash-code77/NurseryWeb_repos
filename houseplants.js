@@ -1,3 +1,26 @@
+const carouselButtonLeft = document.querySelector('.carousel-button.left');
+const carouselButtonRight = document.querySelector('.carousel-button.right');
+const productScroll = document.querySelector('.box-container');
+const productCarousel = document.querySelector('.product');
+
+carouselButtonLeft.addEventListener('click', () => {
+    productScroll.scrollBy({
+        left: -productCarousel.clientWidth, // Move to the left
+        behavior: 'smooth'
+    });
+});
+
+carouselButtonRight.addEventListener('click', () => {
+    productScroll.scrollBy({
+        left: productCarousel.clientWidth, // Move to the right
+        behavior: 'smooth'
+    });
+});
+
+
+
+
+
 const addToCartButtons = document.querySelectorAll('.btn');
 const cartIcon = document.getElementById('cart-icon');
 const cartNotification = document.getElementById('cart-notification');
