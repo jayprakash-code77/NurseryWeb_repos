@@ -88,7 +88,7 @@ app.get("/posts/:id/edit", (req, res)=>{
     let {id} = req.params;
     let idsPost = posts.find((p) => p.id == id);
     res.render("editPost.ejs",{idsPost});
-})
+});
 
 
 // route to delete the post
