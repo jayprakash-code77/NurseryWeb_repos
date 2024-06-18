@@ -52,6 +52,11 @@
     overflow: hidden;
 
 }
+.input-field img{
+    width: 20px;
+    margin-right:10px;
+    cursor: pointer;
+}
 input{
     width:100%;
     background:transparent;
