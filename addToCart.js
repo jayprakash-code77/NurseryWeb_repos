@@ -20,6 +20,7 @@ function renderCartItems() {
             <img src="${item.image}" alt="${item.name}">
             <div class="item-details">
                 <h3>${item.name}</h3>
+                <p>Size : ${item.size}</p>
                 <p>Quantity: ${item.quantity}</p>
                 <p>Price: ₹ ${item.price}</p>
                 <button class="delete-btn" data-index="${index}">Delete</button>
