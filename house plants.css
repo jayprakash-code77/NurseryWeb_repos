@@ -100,6 +100,11 @@ section{
     font-size:1.7rem;
     outline: none;
 }
+
+.header-2 .search-bar-container #search-icon{
+    color:white;
+    font-size:1.7rem;
+}
 .header-2 .search-bar-container #search-bar::placeholder{
     text-transform:capitalize;
     color:#ddd;
@@ -130,6 +135,26 @@ section{
     cursor: pointer;
     display:none;
 }
+
+#cart-icon {
+    position: relative;
+}
+
+#cart-notification {
+    position: absolute;
+    top: -14px;
+    right: -7px;
+    background-color:var(--green);
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+#cart-notification:hover {
+background-color:#333;
+}
+
+
 
 .header-3.active{
     position:fixed;
@@ -188,7 +213,9 @@ section{
     position: relative;
     /* overflow:hidden;  */
     min-width:24rem; /* Adjust image width */
-    
+    min-height:50rem;
+    cursor: pointer;
+    overflow-y:hidden;
 
     
 }
@@ -228,15 +255,8 @@ section{
 
 
 
-
-
-
-
-
-
-
 .product .box-container .box img{
-    border-bottom:.1rem solid rgba(0, 0 ,0, .3);
+    /* border-bottom:.1rem solid rgba(0, 0 ,0, .3); */
     height:32rem;
     width:100%;
     object-fit:cover;
@@ -286,9 +306,31 @@ section{
     color:gold;
     font-size:1.5rem;
 }
+.product .box-container .box .size {
+    padding:1rem;
+}
+.product .box-container .box .size span{
+    font-size:1.6rem;
+}
+.product .box-container .box .size .size-choice {
+    margin-left:1rem;
+    border:1px solid #666;
+    padding:3px;
+    font-size:1rem;
+
+}
+
+.product .box-container .box .size .size-choice:hover{
+    background-color:var(--green);
+    color:white;
+    border:none;
+    scale:1px;
+}
+
 .product .box-container .box .quantity {
     padding:1rem;
 }
+
 .product .box-container .box .quantity span{
     font-size:1.5rem;
 }
@@ -309,11 +351,29 @@ section{
     color:#999999;
     font-size:1.5rem;
     margin-left:2px;
+    
 }
 .product .box-container .box .btn{
     display:block;
     margin:2rem;
-}
+    }
+
+
+    .product .box-container .box .content{
+        position:absolute;
+        bottom:-12.5rem;
+        background:#fff;
+        /* border-top:.1rem solid rgba(0, 0 ,0, .3); */
+        text-align:center;
+        padding:.5rem 0;
+        width:100%;
+        
+    }
+    .product .box-container .box:hover .content{
+        bottom:0px;;
+    }
+
+
 
 .icons-container{
     display:flex;
