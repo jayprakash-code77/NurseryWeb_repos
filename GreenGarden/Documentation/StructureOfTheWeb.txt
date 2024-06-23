@@ -1,5 +1,12 @@
-A) Structure of this Node.js application:-
+Technologies used in the Project 🧑‍💻 👎:-
+1)Frontend Technologies 💻 a)HTML b)CSS c)JAVASCRIPT
+2)Backend Technologies 💻 a)ExpressJS b)NodeJS c)
+3)Data Base Technologies 💻 a)SQL 
 
+
+
+
+A) Structure of this Node.js application:-
 ```
 /myapp
   /routes
@@ -12,8 +19,14 @@ A) Structure of this Node.js application:-
   /models
     user.js
     product.js
+  /views
+    /includes
+    /userViews
+    /productViews
+    Home.ejs
   app.js
   package.json
+
 ```
 
 1) Root Directory (`/myapp`)
@@ -53,7 +66,14 @@ This structure helps keep the codebase organized, making it easier to maintain a
 
 
 
-B) 
+B) Database Details :- 
+    1)ORM (Object Relational Mapping)  => Sequelize
+    2)Data Models  => *************************
+
+C) 
+
+
+
 
 
 

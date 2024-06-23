@@ -4,6 +4,48 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+// serving the static files
+app.use(express.static(path.join(__dirname, "public/CSS")));
+app.use(express.static(path.join(__dirname, "public/JS")));
+app.use(express.static(path.join(__dirname, "public/CSS")));
+
+
+// this is used to understand the url encoded data
+app.use(express.urlencoded({extended:true}));
+
+// requring the "route directory".
+const routes = require("./routes");
+
+app.use("/api", routes);
+
+// Start the server
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+const express = require("express");
+const app = express();
+const path = require("path");
+
+
 const { v4: uuidv4 } = require('uuid');
 
 // port
@@ -61,9 +103,6 @@ let users = [
 
 
 
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-});
 
 // All Routes of the project.
 
@@ -102,10 +141,8 @@ app.post("/login", (req, res) => {
 });
 
 
-
-
-
 // app.get("/account",(req, res) => {
 //     res.render("login.ejs")
 // });
 
+*/
