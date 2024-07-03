@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="/logopl2.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign In</h1>
+            <form method="post" action="http://localhost:3000/api/user/signin">
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" name="email" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="password" name="password" required>
+                        <img src="/eye.png" id="eyeicon">
+                    </div>
+                    <p>Forgot password <a href="#">Click Here!</a></p>
+                </div>
+                <!-- FrontEnd(b1).1 -->
+                <div class="btn-field">
+                    <!-- <button type="submit" id="signupbtn">Sign In</button> -->
+                    <button type="submit" id="signinbtn">Sign In</button>
+                </div>
+                <div class="warn" id="suggest">
+                    Don’t have an account?<a href="http://localhost:3000/api/user/signup" id="signinbtn">Sign Up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/hidePasswordbtn.js">
+        
+    </script>
+</body>
+
+</html>
