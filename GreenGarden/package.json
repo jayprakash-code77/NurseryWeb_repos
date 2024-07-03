@@ -9,9 +9,10 @@
   "author": "Jayprakash Maurya",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "mysql2": "^3.10.1",
+    "mongoose": "^8.4.4",
     "uuid": "^10.0.0"
   }
 }

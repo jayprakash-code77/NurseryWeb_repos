@@ -1,13 +1,16 @@
 // Thank you Krisana./ Jai Shree Ram / Radhe Radhe /
 // console.log("Ram Ram");
-
+require('dotenv').config(); // loading the environment variables.
 const express = require("express");
 const app = express();
 const path = require("path");
+
 // serving the static files
 app.use(express.static(path.join(__dirname, "public/CSS")));
-app.use(express.static(path.join(__dirname, "public/JS")));
+app.use(express.static(path.join(__dirname, "public/JSLogics")));
 app.use(express.static(path.join(__dirname, "public/CSS")));
+app.use(express.static(path.join(__dirname, "public/JSMethods")));
+app.use(express.static(path.join(__dirname, "public/jsimage/")));
 
 
 // this is used to understand the url encoded data
@@ -16,13 +19,15 @@ app.use(express.urlencoded({extended:true}));
 // requring the "route directory".
 const routes = require("./routes");
 
+// This line is used to define middleware and route handling in Express. Specifically, it is known as middleware routing or route mounting. 
 app.use("/api", routes);
 
 // Start the server
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
 
 
 

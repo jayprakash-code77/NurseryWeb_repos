@@ -3,6 +3,8 @@ Technologies used in the Project 🧑‍💻 👎:-
 2)Backend Technologies 💻 a)ExpressJS b)NodeJS c)
 3)Data Base Technologies 💻 a)SQL 
 
+4)Technologies Used to Host the Application.
+
 
 
 
@@ -75,6 +77,22 @@ C)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+Routes Details :-
+1)index.js :- This file is an Express.js router module that sets up the "Main Routing Logic" for this web application.
+2)product.js :- This file is Express.js router module which, handles routing for product-related operations. 
+3)user.js :- This file is Express.js router module which, handles routing for user-related operations.
 
 
 
