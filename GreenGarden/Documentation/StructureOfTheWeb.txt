@@ -1,0 +1,98 @@
+Technologies used in the Project 🧑‍💻 👎:-
+1)Frontend Technologies 💻 a)HTML b)CSS c)JAVASCRIPT
+2)Backend Technologies 💻 a)ExpressJS b)NodeJS c)
+3)Data Base Technologies 💻 a)SQL 
+
+4)Technologies Used to Host the Application.
+
+
+
+
+A) Structure of this Node.js application:-
+```
+/myapp
+  /routes
+    index.js
+    users.js
+    products.js
+  /controllers
+    userController.js
+    productController.js
+  /models
+    user.js
+    product.js
+  /views
+    /includes
+    /userViews
+    /productViews
+    Home.ejs
+  app.js
+  package.json
+
+```
+
+1) Root Directory (`/myapp`)
+This is the main directory of your Node.js application. It contains the main application file (`app.js`) and other important configuration files like `package.json`.
+
+2) `app.js`
+This is the entry point of your Node.js application. It typically sets up the Express server, connects middleware, and defines the main structure of your application. It imports routes and starts the server.
+
+3) `package.json`
+This file contains metadata about your project and its dependencies. It includes information such as the project name, version, description, main file, scripts, author, license, and the list of dependencies and devDependencies.
+
+4) `/routes`
+This directory contains files that define the various routes for your application. Each file in this directory typically corresponds to a specific set of routes.
+a) "index.js":- This file usually handles the root route of your application. For example, it can define what happens when a user visits the home page (`/`).
+
+b) "users.js":- This file contains routes related to user operations, such as retrieving all users, retrieving a user by ID, creating a user, updating a user, and deleting a user.
+
+c) "products.js":- This file contains routes related to product operations, similar to `users.js`, but for products.
+
+5) `/controllers`
+This directory contains files that define the logic for handling the requests that come to the routes. Controllers typically separate the business logic from the routing logic, making the code more modular and easier to manage.
+
+a) "userController.js":- This file contains the business logic for handling user-related requests. For example, functions to retrieve all users, retrieve a user by ID, create a user, update a user, and delete a user.
+
+b) "productController.js":- Similar to `userController.js`, this file contains the business logic for handling product-related requests.
+
+6) `/models`
+This directory contains files that define the data models of your application. In a typical application using a database, models represent the structure of your data and include methods for interacting with the database.
+
+a) "user.js":- This file defines the User model, including its schema and any associated methods for interacting with the user data in the database.
+
+b) "product.js":- This file defines the Product model, including its schema and any associated methods for interacting with the product data in the database.
+
+This structure helps keep the codebase organized, making it easier to maintain and extend as the application grows.
+
+
+
+
+
+B) Database Details :- 
+    1)ORM (Object Relational Mapping)  => Sequelize
+    2)Data Models  => *************************
+
+C) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Routes Details :-
+1)index.js :- This file is an Express.js router module that sets up the "Main Routing Logic" for this web application.
+2)product.js :- This file is Express.js router module which, handles routing for product-related operations. 
+3)user.js :- This file is Express.js router module which, handles routing for user-related operations.
+
+
+
