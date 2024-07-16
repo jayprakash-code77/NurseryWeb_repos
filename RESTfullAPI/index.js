@@ -73,6 +73,12 @@ app.get("/posts/:id", (req, res) => {
 });
 
 
+// route to render the edit post form.
+app.get("/posts/:id/edit", (req, res)=>{
+    let {id} = req.params;
+    let idsPost = posts.find((p) => p.id == id);
+    res.render("editPost.ejs",{idsPost});
+});
 
 // Route to edit post
 app.patch("/posts/:id", (req, res) => {
@@ -83,20 +89,18 @@ app.patch("/posts/:id", (req, res) => {
     res.redirect("/posts");
 });
 
-// route to render the edit post form.
-app.get("/posts/:id/edit", (req, res)=>{
-    let {id} = req.params;
-    let idsPost = posts.find((p) => p.id == id);
-    res.render("editPost.ejs",{idsPost});
-})
 
 
-// route to delete the post
-app.delete("/posts/:id",(req, res) => {
-    let {id} = req.params;
-    posts = posts.filter((p) => p.id !== id);
-    res.redirect("/posts");
-});
+
+
+
+
+// // route to delete the post
+// app.delete("/posts/:id",(req, res) => {
+//     let {id} = req.params;
+//     posts = posts.filter((p) => p.id !== id);
+//     res.redirect("/posts");
+// });
 
 
 app.listen(port, () => {
