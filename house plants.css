@@ -213,7 +213,7 @@ background-color:#333;
     position: relative;
     /* overflow:hidden;  */
     min-width:24rem; /* Adjust image width */
-    min-height:46.5rem;
+    min-height:50rem;
     cursor: pointer;
     overflow-y:hidden;
 
@@ -306,9 +306,31 @@ background-color:#333;
     color:gold;
     font-size:1.5rem;
 }
+.product .box-container .box .size {
+    padding:1rem;
+}
+.product .box-container .box .size span{
+    font-size:1.6rem;
+}
+.product .box-container .box .size .size-choice {
+    margin-left:1rem;
+    border:1px solid #666;
+    padding:3px;
+    font-size:1rem;
+
+}
+
+.product .box-container .box .size .size-choice:hover{
+    background-color:var(--green);
+    color:white;
+    border:none;
+    scale:1px;
+}
+
 .product .box-container .box .quantity {
     padding:1rem;
 }
+
 .product .box-container .box .quantity span{
     font-size:1.5rem;
 }
