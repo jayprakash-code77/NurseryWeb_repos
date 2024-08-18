@@ -13,6 +13,9 @@ router.use("/user/cart", cartRouter);
 
 // General common routes
 
+router.get("/user/checkout", (req, res) => {
+    let 
+})
 // Home page Route
 router.get('/', (req, res) => {
     res.render("../views/Home.ejs");

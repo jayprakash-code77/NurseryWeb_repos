@@ -7,6 +7,8 @@ let posts = [
 // const mongoose = require("../config/batabase");
 
 const User = require("../models/user");
+const argon2 = require("argon2");
+const { hashh } = require("crypto");
 
 // rendering sign up page to user
 exports.newUser = (req, res) => {
@@ -16,16 +18,30 @@ exports.newUser = (req, res) => {
         console.log("Error is :- " + error);
     }
 }
-// adding user data to data base.
-exports.addNewUser = (req, res) => {
+
+
+// asynconious function to convert password to hash code.
+async function hashPassword(plaintextPassword) {
+    try {
+        const hashedPassword = await argon2.hash(plaintextPassword);
+        console.log(hashedPassword);
+        return hashedPassword;
+    } catch (err) {
+        console.error('Error while hashing password:', err);
+        throw err;
+    }
+}
+
+exports.addNewUser = async (req, res) => {
     try {
         let { name, email, password } = req.body;
+        let hashPass = await hashPassword(password); // Example usage
         let user = new User({
             name: name,
             email: email,
-            password: password,
+            password: hashPass,
         });
-        // saving the data
+
         user
             .save()
             .then((result) => {
@@ -33,14 +49,14 @@ exports.addNewUser = (req, res) => {
             })
             .catch((err) => {
                 console.log("Error is :" + err);
-            })
+            });
+
         res.redirect("/api");
 
     } catch (error) {
-        console.log("Error in adding the data to database :" + error);
+        res.render("error.ejs");
     }
 }
-
 
 exports.singInUser = (req, res) => {
     try {
@@ -50,85 +66,114 @@ exports.singInUser = (req, res) => {
     }
 }
 
+// async function authenticate(storedHash, providedPassword) {
+//     try {
+//         return await argon2.verify(storedHash, providedPassword);
+//     } catch (err) {
+//         console.error(err);
+//         return false;
+//     }
+// }
 
-exports.validateUser = (req, res) => {
-    let userEmail = req.body.email;
-    let userPassword = req.body.password;
-    User.find({ email: userEmail, password: userPassword })
-        .then((result) => {
-            if (result.length > 0) {
-                console.log("Welcome back!");
-                res.redirect("/api");
-            } else {
-                console.log("Invalid email or password.");
-            }
-        })
-        .catch((err) => {
-            console.log("Error is: " + err);
-        });
-};
+// exports.validateUser = async (req, res) => {
+//     let userEmail = req.body.email;
+//     let userPassword = req.body.password;
 
-/*
+//     try {
+//         let user = await User.findOne({ email: userEmail });
 
-_id
-6682a17f59643f0d2de913d5
-name
-"csjcb"
-email
-xbxjzB@gmail.com
-password
-"3132"
-__v
-0*/
+//         console.log(user);
+//         if (user) {
+//             let isAuthenticated = await authenticate(user.password, userPassword); // Assuming `passwordHash` is the stored hash
 
-// Route handler to get user by ID
-/*
-exports.getAllUsers = (req, res) => {
-    res.json(posts);
-};
-*/
+//             if (isAuthenticated) {
+//                 console.log("Authentication successful! Log in successful!.");
+//                 res.redirect("/api/");
+//             } else {
+//                 console.log("Authentication failed! Invalid Password.");
+//                 res.redirect("/api/user/signin");
+//             }
+//         } else {
+//             console.log("Email not found! Try to sign up.");
+//             res.redirect("/api/user/signup");
+//         }
+//     } catch (err) {
+//         console.log("Error is: " + err);
+//         res.status(500).send("Internal server error");
+//     }
+// };
 
-/*
-// Route handler to get user by ID
-exports.getUserById = (req, res) => {
-    let {id} = req.params;
-    id = parseInt(id);
-    let post = posts.find(p => p.id === (id));
-    if (post) {
-        res.status(200).json(post);
-    }else{
-        res.status(404).json({ message: 'Post not found' });
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function authenticate(storedHash, providedPassword) {
+    try {
+        if (await argon2.verify(storedHash, providedPassword)) {
+            return true; // Password match
+        } else {
+            return false; // Password does not match
+        }
+    } catch (err) {
+        console.error(err);
+        return false;
     }
-};
-*/
-
-/*
-// Route to render the Sign Up Page
-exports.newUser = (req, res) =>{
-    console.log("Render successfull!")
-    res.render("../views/usersViews/signup.ejs");
-};
-// Route handler to add user to data base 
-exports.addNewUser = (req, res) => {
-    console.log("Entered post request!");
-    let{ id, title, content} = req.body;
-    console.log(id);
-    console.log(title);
-    console.log(content);
 }
 
 
-// route to SingIn user
-exports.singInUser = (req, res) => {
-    try {
-        res.render("../views/usersViews/login.ejs");  // Corrected the file name and path
-    } catch (error) {
-        console.error("Error:", error);  // Improved error logging
-        res.status(500).send("An error occurred while rendering the login page.");  // Added user-friendly error message
-    }
+exports.validateUser = async (req, res) => {
+    let userEmail = req.body.email;
+    let userPassword = req.body.password;
+
+    let data = await User.find({ email: userEmail }).then((result) => {
+        if (result.length > 0) {
+            DBPass = result[0].password;
+        } else {
+            console.log("Email not found! Try to sign up.");
+        }
+    })
+        .catch((err) => {
+            console.log("Error is: " + err);
+        });
+
+
+    authenticate(DBPass, userPassword).then(isAuthenticated => {
+        if (isAuthenticated) {
+            console.log("Authentication successful! Log in successful!.");
+            res.redirect("/api/");
+        } else {
+            console.log("Authentication failed! Invalid Password.");
+            res.redirect("/api/user/signin");
+        }
+    })
+        .catch((error) => {
+            console.log("Error is :" + error);
+        })
 };
 
-*/
+// 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

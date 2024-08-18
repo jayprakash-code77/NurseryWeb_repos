@@ -13,8 +13,13 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
+  },
+  number: {
+    type: Number,
+    unique: true
   }
 });
+
 
 const User = mongoose.model('User', userSchema);
 
