@@ -24,6 +24,7 @@ app.use(express.static(path.join(__dirname,"public/JS")));  //
 
 
 // variable array that contains post data.
+/*
 let posts = [
     {
         id:uuidv4(),
@@ -43,6 +44,7 @@ let posts = [
         content: "Bussiness is the best job I prefer."
     }
 ]
+    */
 
 
 
