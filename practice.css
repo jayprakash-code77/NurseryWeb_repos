@@ -1,0 +1,269 @@
+body {
+    height: 200rem;
+    background: white;
+}
+
+:root {
+    --green: #3A9943;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+::selection {
+    background: var(--green);
+    color: #fff;
+}
+
+html {
+    overflow-x: hidden;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+section {
+    padding: 1.5rem 9%;
+}
+
+.heading {
+    font-size: 3rem;
+    color: #444;
+    padding-left: 1rem;
+    border-left: 0.4rem solid var(--green);
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 3rem;
+    background: var(--green);
+    color: #fff;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+.header-1,
+.header-2,
+.header-3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--green);
+    padding: 2rem 9%;
+}
+
+.header-1 {
+    border: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+
+.header-3 {
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10000;
+}
+
+.header-1 span {
+    font-weight: lighter;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.header-1 a {
+    padding: 0 0.7rem;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.header-1 a:hover {
+    color: yellow;
+}
+
+.header-2 .logo {
+    font-weight: lighter;
+    font-size: 3rem;
+    color: #fff;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.header-2 .logo i {
+    color: yellow;
+}
+
+.header-2 .search-bar-container {
+    display: flex;
+    align-items: center;
+    width: 50rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+}
+
+.header-2 .search-bar-container #search-bar {
+    width: 100%;
+    background: none;
+    text-transform: none;
+    color: #fff;
+    font-size: 1.7rem;
+    outline: none;
+}
+
+.header-2 .search-bar-container #search-icon {
+    color: white;
+    font-size: 1.7rem;
+}
+
+.header-2 .search-bar-container #search-bar::placeholder {
+    text-transform: capitalize;
+    color: #ddd;
+}
+
+.header-3 .navbar a {
+    margin-right: 2rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.header-3 .navbar a:hover {
+    text-decoration: solid;
+}
+
+.header-3 .icon a {
+    margin-right: 2rem;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.header-3 a:hover {
+    color: var(--green);
+}
+
+#menu-bar {
+    font-size: 3rem;
+    color: #333;
+    border: 0.1rem solid #333;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.header-3.active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.user-profile .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.user-profile .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.user-profile .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.1rem solid var(--green);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.user-profile .username {
+    font-size: 3rem;
+    color: #333;
+}
+
+.user-profile .user-age,
+.user-profile .user-address,
+.user-profile .user-phone {
+    font-size: 1.7rem;
+    color: #666;
+}
+
+.footer {
+    background-color: var(--green);
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box {
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3 {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box p,
+.footer .box-container .box a {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.footer .credit {
+    font-size: 2rem;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: normal;
+}
+
+.footer .credit span {
+    color: #fff;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 7.5rem;
+    right: 2rem;
+    z-index: 1000;
+    font-size: 3.5rem;
+    background: rgba(0, 255, 0, 0.1);
+    color: #fff;
+    border-radius: 0.5rem;
+    border: 0.2rem solid var(--green);
+}
+
+.scroll-top:hover {
+    background: var(--green);
+    color: #fff;
+}
