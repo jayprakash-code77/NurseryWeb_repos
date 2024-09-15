@@ -714,6 +714,7 @@ padding: 5px;
     .img-box{
         display:flex;
         flex-direction:column-reverse;
+        height:100%;
         margin:1px;
     }
     .small-img-box{
@@ -733,10 +734,16 @@ padding: 5px;
     
     .big-img-box{
         width:100%;
+        height:350px;
         margin:0;
+
     }
     .big-img{
     width:100%;
+    }
+    .big-img img{
+       max-height:350px;
+
     }
 
     .right{
