@@ -25,6 +25,9 @@ const cartItemSchema = mongoose.Schema({
     timestamps: true
 });
 
+
+
+
 // cart Schema 
 const cartSchema = mongoose.Schema({
     userId: {
@@ -52,11 +55,23 @@ const cartSchema = mongoose.Schema({
 });
 
 
+
+
 // Method to calculate total price and final price
 cartSchema.methods.calculatePrices = function () {
     this.totalPrice = this.items.reduce((total, item) => total + (item.price * item.quantity), 0);
     this.finalPrice = this.totalPrice - (this.discountPrice || 0);
 };
+
+
+
+cartSchema.methods.calculateTotalDiscount = function () {
+    const totalDiscount = (this.discountPrice || 0); // Calculate the discount
+    console.log(`Total Discount: ${totalDiscount}`);
+    return totalDiscount; // Return the total discount if needed elsewhere
+};
+
+
 
 const Cart = mongoose.model('Cart', cartSchema);
 
