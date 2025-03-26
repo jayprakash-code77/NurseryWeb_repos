@@ -91,7 +91,7 @@ setInterval(function(){
 
 
     document.getElementById("marigold-content").addEventListener("click", function() {
-        window.location.href = "marigold Plant.html";
+        window.location.href = "snakePlants.html";
     });
     
     document.getElementById("gudhal-content").addEventListener("click", function() {
